@@ -1,7 +1,7 @@
 import marked from 'marked' 
 
 class NotePublisher {
-  constructor(path, names, config) {
+  constructor(path, names, config = {}) {
     this.names = names;
     this.fileIndexed = config.fileIndexed;
     this.root = config.root || "notes"
@@ -40,17 +40,5 @@ class NotePublisher {
     return str.replace(/ /g, "-").toLowerCase()
   }
 }
-
-const myNotes = new NotePublisher("r-notes", [
-  "Intro to R",
-  "Vectors", 
-  "Matrices",
-  "Factors",
-], {fileIndexed: true})
-
-myNotes.text().then(result => {
-  document.getElementById("notes").innerHTML = marked(result)
-  document.getElementById("contents").innerHTML = myNotes.tableOfContents({character: "- "})
-})
 
 export default NotePublisher
