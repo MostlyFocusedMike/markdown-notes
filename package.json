@@ -1,7 +1,7 @@
 {
-  "name": "markdown-notes",
+  "name": "note-publisher",
   "version": "1.0.0",
-  "description": "Easily display your markdown notes",
+  "description": "Easily put your markdown notes online",
   "main": "src/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,12 +22,12 @@
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
+    "marked": "^0.5.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7"
-  },
-  "dependencies": {
-    "marked": "^0.5.0"
   }
 }

@@ -1,17 +1,17 @@
 import marked from 'marked' 
 
-class NoteWriter {
+class NotePublisher {
   constructor(path, names, config) {
     this.names = names;
     this.fileIndexed = config.fileIndexed;
     this.root = config.root || "notes"
     this.path = `${this.root}/${path}`;
   }
-  
+
   text() {
     const promises = []
     this.names.map((name, idx) => {
-      const fileName = this.fileIndexed ? `${idx + 1}-${this.dashed(name)}` : this.dashed(name)
+      const fileName = this.fileIndexed ? `${idx + 1}-${this._dashed(name)}` : this._dashed(name)
       const promise = fetch(`${this.path}/${fileName}.md`)
         .then(response => response.text())
         .then(text => `\n# ${name}\n ${text}`)
@@ -32,16 +32,16 @@ class NoteWriter {
       } else {
         text = name;
       }
-      return `<a href="#${this.dashed(name)}">${text}</a>`
+      return `<a href="#${this._dashed(name)}">${text}</a>`
     }).join('')
   }
 
-  dashed(str) {
+  _dashed(str) {
     return str.replace(/ /g, "-").toLowerCase()
   }
 }
 
-const myNotes = new NoteWriter("r-notes", [
+const myNotes = new NotePublisher("r-notes", [
   "Intro to R",
   "Vectors", 
   "Matrices",
@@ -53,4 +53,4 @@ myNotes.text().then(result => {
   document.getElementById("contents").innerHTML = myNotes.tableOfContents({character: "- "})
 })
 
-// export default NoteWriter
+export default NotePublisher
