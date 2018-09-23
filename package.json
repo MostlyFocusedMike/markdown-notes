@@ -28,8 +28,6 @@
     "webpack-dev-server": "^3.1.7"
   },
   "dependencies": {
-    "html-loader": "^0.5.5",
-    "markdown-loader": "^4.0.0",
     "marked": "^0.5.0"
   }
 }

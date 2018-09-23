@@ -9,19 +9,4 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: "/markdown-notes/",
     },
-//     module: {
-//       rules : [
-//       {
-//           test: /\.md$/,
-//           use: [
-//               {
-//                   loader: "html-loader"
-//               },
-//               {
-//                   loader: "markdown-loader",
-//               }
-//           ]
-//       }
-//       ]
-//   },
 }
