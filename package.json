@@ -1,0 +1,35 @@
+{
+  "name": "markdown-notes",
+  "version": "1.0.0",
+  "description": "Easily display your markdown notes",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --output-public-path=/dist/",
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [
+    "notes",
+    "marked",
+    "markdown"
+  ],
+  "author": "mike cronin",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^4.0.0",
+    "marked": "^0.5.0"
+  }
+}
