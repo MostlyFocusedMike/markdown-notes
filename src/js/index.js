@@ -18,7 +18,7 @@ class NotePublisher {
       promises.push(promise)
     })
     return Promise.all(promises).then(values => {
-      return marked(values.join()))
+      return marked(values.join())
     }).catch(console.log)
   }
 
