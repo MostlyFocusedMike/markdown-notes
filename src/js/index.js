@@ -67,17 +67,5 @@ document.write(myNotes.journalSections("R Notes", true))
 document.write(myNotes.journalText("Javascript Notes"))
 document.write(myNotes.journalSections("Javascript Notes"))
 
-fetch("notes/r-notes/0-intro-to-r.md")
-  .then(response => response.text())
-  .then(result => {
-    document.write(result)
-    console.log(result)
-  });
-
-document.write(myNotes.text())
-
-.innerHTML = myNotes.tableOfContents()
-document.getElementById("notes").innerHTML = myNotes.text()
-
 
 export default JournalWriter
