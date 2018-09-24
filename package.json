@@ -1,6 +1,6 @@
 {
   "name": "note-publisher",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Easily put your markdown notes online",
   "main": "src/js/index.js",
   "scripts": {
