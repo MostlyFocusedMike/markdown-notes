@@ -80,4 +80,4 @@ class JournalWriter {
 // document.getElementById("notes").innerHTML = myNotes.text()
 
 
-// export default JournalWriter
+export default JournalWriter
