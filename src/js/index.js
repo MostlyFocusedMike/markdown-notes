@@ -35,24 +35,24 @@ class JournalWriter {
   }
 }
 
-// const journals = [
-//   {
-//     journalTitle: "R Notes",
-//     folder: "dummy/r-notes",
-//     sections: [
-//       "Intro to R",
-//       "Vectors",
-//     ]
-//   }, 
-//   {
-//     journalTitle: "Javascript Notes",
-//     folder: "js-notes",
-//     sections: [
-//       "Intro to JS",
-//       "numbers",
-//     ]
-//   }
-// ]
+const journals = [
+  {
+    journalTitle: "R Notes",
+    folder: "dummy/r-notes",
+    sections: [
+      "Intro to R",
+      "Vectors",
+    ]
+  }, 
+  {
+    journalTitle: "Javascript Notes",
+    folder: "js-notes",
+    sections: [
+      "Intro to JS",
+      "numbers",
+    ]
+  }
+]
   
 
 const myNotes = new JournalWriter
